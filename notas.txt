@@ -1,0 +1,44 @@
+1. Requisitos del sistema
+
+Sistema operativo: Windows 10/11 (funciona también en Linux/Mac, pero MT5 es más fácil en Windows).
+
+Python: versión 3.9 – 3.11 (recomendado, evita 3.12 porque MetaTrader5 aún no siempre es estable ahí).
+
+MetaTrader 5 instalado (con cuenta demo o real configurada).
+
+2. Librerías necesarias de Python
+
+pip install python-binance
+
+pip install MetaTrader5
+
+pip install colorama
+
+pip install requests
+
+pip install urllib3
+
+3. Configurar credenciales
+
+⚠️ Reemplázalos por:
+
+Tu login/clave/servidor reales de MT5.
+
+Una API Key de Binance Futures USD-M (con permisos de trading habilitados).	
+
+4. Ejecutar el bot
+
+Ubícate en la carpeta donde guardaste COPYMT5TOBINANCE.py y ejecuta:
+
+Si todo está bien, deberías ver en consola mensajes en colores como:
+Conectado a MT5, Posición replicada: BTCUSDT qty=... side=BUY, etc.
+
+5. Otros puntos importantes
+
+Mapeo de símbolos: revisa el diccionario MT5_TO_BINANCE y ajusta los símbolos según los que use tu bróker en MT5.
+
+Apalancamiento: ya está configurado por grupos (GROUP_LEVERAGE). Ajusta si usas otros.
+
+Riesgo: siempre prueba primero en cuentas demo (MT5 demo + Binance testnet si quieres).
+
+Conexión estable: evita WiFi inestable, porque el bot sincroniza en tiempo real.
